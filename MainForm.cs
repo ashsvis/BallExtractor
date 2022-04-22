@@ -34,12 +34,12 @@ namespace BallExtractor
                         phase = ProgramPhase.ShowResult;
                         break;
                     case ProgramPhase.ShowResult:
-                        var frm = new ShoBallForm();
+                        var frm = new ShowBallForm();
                         var rect = new Rectangle(center.X - radius.Width, center.Y - radius.Height, radius.Width * 2, radius.Height * 2);
                         frm.Build(rect, BackgroundImage);
-                        if (frm.ShowDialog() == DialogResult.OK)
-                        {
-                        }
+                        frm.ShowDialog(this);
+                        phase = ProgramPhase.SelectCenter;
+                        center = Point.Empty;
                         break;
                 }
             }
@@ -48,11 +48,9 @@ namespace BallExtractor
                 switch (phase)
                 {
                     case ProgramPhase.SelectRadius:
+                    case ProgramPhase.ShowResult:
                         phase = ProgramPhase.SelectCenter;
                         center = Point.Empty;
-                        break;
-                    case ProgramPhase.ShowResult:
-                        phase = ProgramPhase.SelectRadius;
                         break;
                 }
             }
