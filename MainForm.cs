@@ -4,25 +4,21 @@ using System.Windows.Forms;
 
 namespace BallExtractor
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         ProgramPhase phase = ProgramPhase.SelectCenter;
 
         Point center = Point.Empty;
         Size radius = Size.Empty;
-        Point nextColumnCenter = Point.Empty;
-        int columnOffset = 0;
-        Point nextRowCenter = Point.Empty;
-        int rowOffset = 0;
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             DoubleBuffered = true;
             Cursor = Cursors.Cross;
         }
 
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        private void MainForm_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -38,7 +34,11 @@ namespace BallExtractor
                         phase = ProgramPhase.ShowResult;
                         break;
                     case ProgramPhase.ShowResult:
+                        var frm = new ShoBallForm();
+                        if (frm.ShowDialog() == DialogResult.OK)
+                        {
 
+                        }
                         break;
                 }
             }
@@ -60,7 +60,7 @@ namespace BallExtractor
             Invalidate();
         }
 
-        private void Form1_Paint(object sender, PaintEventArgs e)
+        private void MainForm_Paint(object sender, PaintEventArgs e)
         {
             switch (phase)
             {
@@ -94,12 +94,12 @@ namespace BallExtractor
             graphics.FillEllipse(Brushes.Magenta, rect);
         }
 
-        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        private void MainForm_MouseMove(object sender, MouseEventArgs e)
         {
             Invalidate();
         }
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {

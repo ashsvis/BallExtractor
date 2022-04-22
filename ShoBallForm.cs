@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BallExtractor
 {
-    public partial class Form2 : Form
+    public partial class ShoBallForm : Form
     {
-        public Form2()
+        public ShoBallForm()
         {
             InitializeComponent();
         }

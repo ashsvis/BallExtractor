@@ -1,7 +1,7 @@
 ﻿
 namespace BallExtractor
 {
-    partial class Form2
+    partial class ShoBallForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,12 +35,13 @@ namespace BallExtractor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::BallExtractor.Properties.Resources.transparent;
             this.ClientSize = new System.Drawing.Size(198, 173);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form2";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form2";
             this.ResumeLayout(false);
 
