@@ -31,7 +31,7 @@ namespace BallExtractor
         {
             this.SuspendLayout();
             // 
-            // Form2
+            // ShoBallForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -40,9 +40,10 @@ namespace BallExtractor
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form2";
+            this.Name = "ShoBallForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Form2";
+            this.Text = "Шар";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.ShoBallForm_Paint);
             this.ResumeLayout(false);
 
         }

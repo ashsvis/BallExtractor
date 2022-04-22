@@ -35,9 +35,10 @@ namespace BallExtractor
                         break;
                     case ProgramPhase.ShowResult:
                         var frm = new ShoBallForm();
+                        var rect = new Rectangle(center.X - radius.Width, center.Y - radius.Height, radius.Width * 2, radius.Height * 2);
+                        frm.Build(rect, BackgroundImage);
                         if (frm.ShowDialog() == DialogResult.OK)
                         {
-
                         }
                         break;
                 }
@@ -52,8 +53,6 @@ namespace BallExtractor
                         break;
                     case ProgramPhase.ShowResult:
                         phase = ProgramPhase.SelectRadius;
-                        nextRowCenter = Point.Empty;
-                        rowOffset = 0;
                         break;
                 }
             }
