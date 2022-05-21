@@ -1,7 +1,7 @@
 ﻿
 namespace BallExtractor
 {
-    partial class MainForm
+    partial class BallExtractorForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.

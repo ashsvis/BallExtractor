@@ -63,6 +63,16 @@ namespace BallExtractor.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cards {
+            get {
+                object obj = ResourceManager.GetObject("Cards", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap transparent {
             get {
                 object obj = ResourceManager.GetObject("transparent", resourceCulture);

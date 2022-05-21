@@ -4,14 +4,14 @@ using System.Windows.Forms;
 
 namespace BallExtractor
 {
-    public partial class MainForm : Form
+    public partial class BallExtractorForm : Form
     {
         ProgramPhase phase = ProgramPhase.SelectCenter;
 
         Point center = Point.Empty;
         Size radius = Size.Empty;
 
-        public MainForm()
+        public BallExtractorForm()
         {
             InitializeComponent();
             DoubleBuffered = true;

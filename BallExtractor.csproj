@@ -45,12 +45,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainForm.cs">
+    <Compile Include="CardExtractorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="CardExtractorForm.Designer.cs">
+      <DependentUpon>CardExtractorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BallExtractorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BallExtractorForm.Designer.cs">
+      <DependentUpon>BallExtractorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramCardPhase.cs" />
     <Compile Include="ShowBallForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,8 +67,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="ProgramPhase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="CardExtractorForm.resx">
+      <DependentUpon>CardExtractorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BallExtractorForm.resx">
+      <DependentUpon>BallExtractorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShowBallForm.resx">
       <DependentUpon>ShowBallForm.cs</DependentUpon>
@@ -94,6 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
