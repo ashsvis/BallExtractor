@@ -107,6 +107,7 @@ namespace BallExtractor
                             r.Offset(step.Width, 0);
                         }
                         r.X = topleft.X;
+                        r.Offset(0, step.Height);
                     }
                     break;
             }
@@ -179,7 +180,7 @@ namespace BallExtractor
                             }
                             else if (e.Modifiers.HasFlag(Keys.Alt))
                             {
-                                step.Width++;
+                                step.Height++;
                             }
                             break;
                         case ProgramCardPhase.ShowResult:
@@ -191,7 +192,7 @@ namespace BallExtractor
                             }
                             else if (e.Modifiers.HasFlag(Keys.Alt))
                             {
-                                step.Width++;
+                                step.Height++;
                             }
                             break;
                     }
@@ -220,7 +221,7 @@ namespace BallExtractor
                             }
                             else if (e.Modifiers.HasFlag(Keys.Alt))
                             {
-                                step.Height--;
+                                step.Width--;
                             }
                             break;
                     }
@@ -249,7 +250,7 @@ namespace BallExtractor
                             }
                             else if (e.Modifiers.HasFlag(Keys.Alt))
                             {
-                                step.Height++;
+                                step.Width++;
                             }
                             break;
                     }
