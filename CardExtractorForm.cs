@@ -51,7 +51,7 @@ namespace BallExtractor
                         step = Size.Empty;
                         break;
                 }
-                Text = $"{phase}";
+                Text = $"{phase} location:{topleft} size:{diagonal} step:{step}";
             }
             else if (e.Button == MouseButtons.Right)
             {
@@ -69,7 +69,7 @@ namespace BallExtractor
                         phase = ProgramCardPhase.SelectDiagonal;
                         break;
                 }
-                Text = $"{phase}";
+                Text = $"{phase} location:{topleft} size:{diagonal} step:{step}";
             }
             Invalidate();
         }
@@ -256,6 +256,7 @@ namespace BallExtractor
                     }
                     break;
             }
+            Text = $"{phase} location:{topleft} size:{diagonal} step:{step}";
             Invalidate();
         }
     }
